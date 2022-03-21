@@ -292,4 +292,7 @@ footer .title img{
   border: 3px solid var(--white);
 }
 
+button:hover, .closed img, .question img{
+  cursor: pointer;
+}
 
