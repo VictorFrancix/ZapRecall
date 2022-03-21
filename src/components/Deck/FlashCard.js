@@ -1,5 +1,5 @@
 import {useState} from "react";
-export default function FlashCard({numQuest,answer, question}){
+export default function FlashCard({numQuest,answer, question, UpdtNumCompleted, UpdtStatusIcons }){
     function checkStatus(status){
         if(status === "closed"){
             return(<>
@@ -26,18 +26,24 @@ export default function FlashCard({numQuest,answer, question}){
                     <div className="buttons">
                         <button className ="not-button" onClick={(e) => {
                             e.stopPropagation()
+                            UpdtNumCompleted(1)
+                            UpdtStatusIcons("./images/not.svg")
                             setStatuscard("not-remember")
                         }}>
                             Não lembrei
                         </button>
                         <button className ="almost-button" onClick={(e) => {
                             e.stopPropagation()
+                            UpdtNumCompleted(1)
+                            UpdtStatusIcons("./images/almost.svg")
                             setStatuscard("almost-not-remember")
                         }}>
                             Quase não lembrei
                         </button>
                         <button className ="zap-button" onClick={(e) => {
                             e.stopPropagation()
+                            UpdtNumCompleted(1)
+                            UpdtStatusIcons("./images/zap.svg")
                             setStatuscard("zap")
                         }}>
                             Zap!
