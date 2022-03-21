@@ -1,6 +1,6 @@
 import Deck from "./Deck/Deck";
 import Header from "./Header";
-import Footer from "./Footer"
+import Footer from "./Footer/Footer"
 import { useState } from "react"
 
 export default function GamePage(){
@@ -19,7 +19,9 @@ export default function GamePage(){
     return (
         <>
             <Header/>
-            <Deck deck = {deck} UpdtNumCompleted={numCompletedUpdated => setNumCompleted(numCompletedUpdated + numCompleted)} UpdtStatusIcons = {StatusIconsUpdt => setStatusIcon([...statusIcons, StatusIconsUpdt])} />
+            <main>
+                <Deck deck = {deck} UpdtNumCompleted={numCompletedUpdated => setNumCompleted(numCompletedUpdated + numCompleted)} UpdtStatusIcons = {StatusIconsUpdt => setStatusIcon([...statusIcons, StatusIconsUpdt])} />
+            </main>
             <Footer numQuest={deck.length} numCompleted ={numCompleted} statusIcons = {statusIcons}/>
         </>
     )

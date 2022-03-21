@@ -1,18 +1,20 @@
+import StatusIcons from "./StatusIcon"
+
 export default function Footer({numQuest,numCompleted, statusIcons}){
     return (
-        <footer className={zapFinished ? "zap-end" : ""}>
-            {zapFinished
-                ? zapAmount >= goal
+        <footer>
+            { numQuest === numCompleted
+                ? statusIcons.indexOf("./images/not.svg") === -1
                     ? <>
                         <div className="title">
-                            <img src="./imgs/parabens.png" />
+                            <img src="./images/party.png" alt = ""/>
                             <p>PARABÉNS!</p>
                         </div>
                         <p className="final-text">Você não esqueceu de nenhum flashcard!</p>
                     </>
                     : <>
                         <div className="title">
-                            <img src="./imgs/sad.png" />
+                            <img src="./images/sad.png" alt = ""/>
                             <p>PUTZ!</p>
                         </div>
                         <p className="final-text">Ainda faltaram alguns...
