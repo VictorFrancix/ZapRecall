@@ -1,0 +1,72 @@
+:root {
+  --wrong: #ff3030;
+  --almost: #ff922e;
+  --right: #2fbe34;
+  --bkg: #fb6b6b;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.escondida.correto p,
+.escondida.correto ion-icon,
+footer .resultados .correto ion-icon {
+  color: var(--right);
+}
+
+.escondida.quase ion-icon,
+.escondida.quase p,
+footer .resultados .quase ion-icon {
+  color: var(--almost);
+}
+
+body {
+  background-color: var(--bkg);
+  font-family: "Recursive", sans-serif;
+}
+
+.escondida.incorreto ion-icon,
+.escondida.incorreto p,
+footer .resultados .incorreto ion-icon {
+  color: var(--wrong);
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div {
+  width: 230px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px auto 51px auto;
+}
+
+header img {
+  width: 52px;
+  height: 60px;
+}
+
+.title {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.012em;
+  color: var(--white);
+  transform: rotate(0.58deg);
+  }
+
+
+
