@@ -89,13 +89,12 @@ header img {
 
 main {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100% - 200px);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 59px;
   padding: 0 10px 0;
-  overflow: auto;
 }
 
 .deck {
@@ -104,6 +103,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 80px;
+  overflow-y: auto;
 }
 
 .closed, .not-remember, .almost-not-remember, .zap{
@@ -236,7 +237,7 @@ main {
 footer {
   width: 100%;
   height: auto;
-  min-height: 100px;
+  min-height: 80px;
   background-color:  var(--white);
   display: flex;
   justify-content: center;
@@ -244,6 +245,7 @@ footer {
   flex-direction: column;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
   position: fixed;
+  bottom: 0;
   z-index: 1;
 }
 
@@ -252,7 +254,7 @@ footer p {
   font-size: 16px;
   line-height: 14px;
   color: var(--p);
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 footer .title{
@@ -264,10 +266,12 @@ footer .title{
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .status-icon img{
   margin-right: 5px;
+  margin-bottom: 10px;
 }
 
 footer .title img{
@@ -276,7 +280,7 @@ footer .title img{
 }
 
 .final-text{
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 *::-webkit-scrollbar {
