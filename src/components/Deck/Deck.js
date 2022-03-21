@@ -12,7 +12,7 @@ export default function Deck(){
     ]
     return (
         <main>
-            {deck.map(({question,answer},numQuest) => <FlashCard numQuest = {numQuest + 1} key = {numQuest + 1} />)}
+            {deck.map(({question,answer},numQuest) => <FlashCard numQuest = {numQuest + 1} key = {numQuest + 1} answer = {answer} question = {question}/>)}
         </main>
     )
 }

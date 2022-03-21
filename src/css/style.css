@@ -1,9 +1,10 @@
 :root {
-  --wrong: #ff3030;
-  --almost: #ff922e;
-  --right: #2fbe34;
+  --not-remember: #ff3030;
+  --almost-not-remember: #ff922e;
+  --zap: #2fbe34;
   --bkg: #fb6b6b;
   --white: #FFFFFF;
+  --p: #333333;
 }
 
 * {
@@ -14,24 +15,6 @@
 body {
   background-color: var(--bkg);
   font-family: "Recursive", sans-serif;
-}
-
-.escondida.correto p,
-.escondida.correto ion-icon,
-footer .resultados .correto ion-icon {
-  color: var(--right);
-}
-
-.escondida.quase ion-icon,
-.escondida.quase p,
-footer .resultados .quase ion-icon {
-  color: var(--almost);
-}
-
-.escondida.incorreto ion-icon,
-.escondida.incorreto p,
-footer .resultados .incorreto ion-icon {
-  color: var(--wrong);
 }
 
 section.initial-page {
@@ -114,7 +97,7 @@ main{
   margin-top: 100px;
 }
 
-.closed{
+.closed, .not-remember, .almost-not-remember, .zap{
   width: 300px;
   height: 65px;
   background: var(--white);
@@ -126,14 +109,17 @@ main{
   margin: 5px auto 20px auto;
 }
 
-.closed p{
+.closed p, .almost-not-remember p, .not-remember p, .zap p{
   font-family: 'Recursive';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  color: #333333;
   margin-left: 15px;
+}
+
+.closed p{
+  color: var(--p);
 }
 
 .closed img{
@@ -142,6 +128,93 @@ main{
   margin-right: 20px;
 }
 
+.question, .answer {
+  width: 299px;
+  height: 131px;
+  background: #FFFFD5;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px ;
+
+}
+
+.question img {
+  justify-self:end;
+  align-self: flex-end;
+}
+
+.question p, .answer p {
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--p);
+  align-self: center;
+  justify-self: center;
+  margin-top: 18px;
+  margin-left: 15px;
+}
+
+.question img {
+  width: 30px;
+  height: 20px;
+}
+
+.answer .buttons{
+  width: 271px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.not-button, .almost-button ,.zap-button{
+  width: 85.17px;
+  height: 37.17px;
+  border-radius: 5px;
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.not-button{
+  background-color: var(--not-remember);
+}
+
+.almost-button{
+  background-color: var(--almost-not-remember);
+}
+
+.zap-button{
+  background-color: var(--zap);
+}
+.not-remember p, .almost-not-remember p, .zap p{
+  text-decoration-line: line-through;
+}
+
+.not-remember p{
+  color: var(--not-remember)
+}
+
+.almost-not-remember p{
+  color: var(--almost-not-remember)
+}
+
+.zap p {
+  color: var(--zap)
+}
 
 
 
